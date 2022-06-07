@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.json())
 app.use(express.static('public'));
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('the server is up')
 })
 
