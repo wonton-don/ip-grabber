@@ -1,3 +1,4 @@
+//require('dotenv').config()
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -5,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 const mongoose = require('mongoose');
 const axios = require('axios');
 const url = require('url');
-mongoose.connect('mongodb://localhost:27017/IP-Grabber');
+mongoose.connect('mongodb+srv://dbUser:dtmDhC8wvGys2XIm@cluster0.xtka1tz.mongodb.net/?retryWrites=true&w=majority');
 const IPGraber = mongoose.model('IPGraber', { url: String, redirect: String, ips: [] });
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
