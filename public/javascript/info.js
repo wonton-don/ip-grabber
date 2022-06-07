@@ -18,7 +18,7 @@ h2.addEventListener('click', () => {
         div.appendChild(submitBtn);
         body.appendChild(div)
         submitBtn.addEventListener('click', async () => {
-            await axios.post(`http://localhost:8080/edit/${window.location.href.split('/')[4]}`, {
+            await axios.post(`${window.location.origin}/edit/${window.location.href.split('/')[4]}`, {
                 redirect: textBox.value
             })
                 .then((res) => {

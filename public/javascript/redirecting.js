@@ -7,5 +7,5 @@ axios.get(`https://api.ipdata.co?api-key=${apiKey}`)
     .then(async res => {
         const data = await res.data;
         ip = data.ip;
-        window.location.href = `http://localhost:8080/${window.location.href.split('/')[4]}/${ip}`
+        window.location.href = `${window.location.origin}/${window.location.href.split('/')[4]}/${ip}`
     })
