@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+    <link rel="stylesheet" href="/css/info.css">
+</head>
+
+<body>
+    <h1 class="logo">Grab an IP</h1>
+    <h2 class="url">Link to grab IP Addressess: <a href="<%= info.url %> ">
+            <%= info.url %>
+        </a>
+    </h2>
+    <% if(info.ips.length){ %>
+        <table CELLSPACING=0>
+            <tr>
+                <th>IP Address</th>
+                <th>Location</th>
+                <th>ISP</th>
+            </tr>
+            <% for(let ip of info.ips) {%>
+                <tr>
+                    <td class="ip">
+                        <%=ip%>
+                    </td>
+                    <td class="location"></td>
+                    <td class="isp"></td>
+                </tr>
+                <% } %>
+        </table>
+        <% } else{%>
+            <h3>No IP's have been grabbed yet :(</h3>
+            <% } %>
+                <h2 class="redirect">Edit Link: <span>
+                        <%= info.redirect%>
+                    </span>
+                </h2>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <script src="/javascript/info.js"></script>
+</body>
+
+</html>

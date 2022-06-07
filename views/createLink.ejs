@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Link</title>
+    <link href="http://fonts.cdnfonts.com/css/futura-md-bt" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+    <link rel="stylesheet" href="/css/createLink.css">
+</head>
+
+<body>
+    <h1 class="logo">Grab an IP</h1>
+    <h1>Enter the base URL:</h1>
+    <div class="search">
+        <input type="text" name="redirect" id="redirect">
+    </div>
+    <h3 class="recentTrackerHeader gone">Recent Trackers</h3>
+    <div class="recentTracker gone">
+        <div class="top">
+            <p class="recentLink">Link to grab IP</p>
+            <p class="recentDate">4/22/2021</p>
+        </div>
+        <h3>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js</h3>
+    </div>
+    <div class="recentTracker gone">
+        <div class="top">
+            <p class="recentLink">Link to grab IP</p>
+            <p class="recentDate">4/22/2021</p>
+        </div>
+        <h3>https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js</h3>
+    </div>
+    <div class="copyLink1 none">
+        <p class="p">Link to grab IP Addresses</p>
+        <h2 class="link1"></h2>
+        <a class="a1" onclick="copyToClickBoard(document.querySelector('.link1').innerText)">Copy to clipboard</a>
+    </div>
+    <div class="copyLink2 none">
+        <p class="p">Link to view grabbed IP's</p>
+        <h2 class="link2"></h2>
+        <a class="a2" onclick="copyToClickBoard(document.querySelector('.link2').innerText)">Copy to clipboard</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascript/createLink.js"></script>
+</body>
+
+</html>
